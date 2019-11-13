@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>State</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="rule rule_1">
+                <div class="rule__name">
+                    Even State Rule:
+                </div>
+                <div class="rule__value">
+                    +3
+                </div>
+            </div>
+            <div class="rule rule_2">
+                <div class="rule__name">
+                    Odd State Rule:
+                </div>
+                <div class="rule__value">
+                    *2
+                </div>
+            </div>
+            <div class="rule rule_3">
+                <div class="rule__name">
+                    Ten Mod Rule:
+                </div>
+                <div class="rule__value">
+                    -10
+                </div>
+            </div>
+            <div class="rule rule_4">
+                <div class="rule__name">
+                    Zero Rule:
+                </div>
+                <div class="rule__value">
+                    +1
+                </div>
+            </div>
+        </div>
+        <div class="column column_main">
+            <div class="value" id="value">
+                0
+            </div>
+            <div class="action" id="action" onclick="system.action()">
+                Action
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

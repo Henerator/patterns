@@ -1,0 +1,16 @@
+:root {
+    --color-blue: #39C2D7;
+    --color-green: #A3C644;
+    --color-orange: #FFA21D;
+    --color-dark-gray: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.container {
+}
