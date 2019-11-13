@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strategy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="items-container" id="items-container">
+    </div>
+
+    <div class="actions-container">
+        <div
+            onclick="updateSearch(strategies.evenStrategy)"
+            class="action action_blue">
+            Even Numbers
+        </div>
+        <div
+            onclick="updateSearch(strategies.oddStrategy)"
+            class="action action_green">
+            Odd Numbers
+        </div>
+        <div
+            onclick="updateSearch(strategies.lessStrategy)"
+            class="action action_orange">
+            Less Then 50
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
