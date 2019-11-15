@@ -1,0 +1,63 @@
+:root {
+    --color-blue: #39C2D7;
+    --color-green: #A3C644;
+    --color-orange: #FFA21D;
+    --color-red: #eb6a6a;
+    --color-light-gray: #f5f5f5;
+    --color-dark-gray: #333;
+    --color-border: #e3e3e3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 36px;
+    font-family: 'Arial', sans-serif;
+    color: var(--color-dark-gray);
+}
+
+.action, .state {
+    width: 200px;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    border: 1px solid var(--color-border);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background: var(--color-green);
+}
+
+.action {
+    cursor: pointer;
+}
+
+.action_cancel {
+    background: var(--color-red);
+}
+
+.states-container {
+    margin-left: 36px;
+}
+
+.state {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 36px;
+    padding-right: 36px;
+    background: var(--color-blue);
+}
+
+.state__command-value {
+    color: var(--color-light-gray);
+    font-size: 12px;
+}
