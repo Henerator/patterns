@@ -34,6 +34,7 @@
     font-weight: bold;
     color: white;
     background: var(--color-green);
+    user-select: none;
 }
 
 .action {
