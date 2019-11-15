@@ -90,8 +90,16 @@ class Button {
   }
 }
 
+class ShortCut {
+  constructor(condition, action) {
+    this.condition = condition;
+    this.action = action;
+  }
+}
+
 class Calculator {
   history = [];
+  shortcuts = [];
   lastCommandText;
   constructor(initialValue) {
     this.value = initialValue;
@@ -104,6 +112,18 @@ class Calculator {
 
     const undoAction = () => this.executeCommand(new UndoCommand(this));
     this.undoButton = new Button(undoActionElement, undoAction);
+    this.undoShortcut = new ShortCut((event) => event.ctrlKey && event.key === 'z', undoAction);
+
+    this.shortcuts.push(this.undoShortcut);
+
+    document.addEventListener('keyup', (event => {
+      this.shortcuts.forEach(shortcut => {
+        if (shortcut.condition(event)) {
+          event.preventDefault();
+          shortcut.action();
+        }
+      })
+    }));
   }
 
   executeCommand(command) {
