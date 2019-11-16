@@ -29,13 +29,12 @@ class ForwardIterator extends Iterator {
     this.currentIndex = 0;
   }
   next() {
-    const item = this.collection[this.currentIndex];
-    const done = this.currentIndex >= this.collection.length;
-    this.currentIndex++;
-    if (done) {
+    if (this.currentIndex < this.collection.length) {
+      return { item: this.collection[this.currentIndex++], done: false }
+    } else {
       this.currentIndex = 0;
+      return { done: true };
     }
-    return { item, done };
   }
 }
 
@@ -45,13 +44,12 @@ class BackwardIterator extends Iterator {
     this.currentIndex = collection.length - 1;
   }
   next() {
-    const item = this.collection[this.currentIndex];
-    const done = this.currentIndex < 0;
-    this.currentIndex--;
-    if (done) {
+    if (this.currentIndex >= 0) {
+      return { item: this.collection[this.currentIndex--], done: false }
+    } else {
       this.currentIndex = this.collection.length - 1;
+      return { done: true };
     }
-    return { item, done };
   }
 }
 
@@ -70,14 +68,13 @@ class RandomIterator extends Iterator {
     }
   }
   next() {
-    const collectionIndex = this.randomIndexes[this.currentIndex];
-    const item = this.collection[collectionIndex];
-    const done = this.currentIndex >= this.collection.length;
-    this.currentIndex++;
-    if (done) {
+    if (this.currentIndex < this.collection.length) {
+      const collectionIndex = this.randomIndexes[this.currentIndex++];
+      return { item: this.collection[collectionIndex], done: false }
+    } else {
       this.currentIndex = 0;
+      return { done: true };
     }
-    return { item, done };
   }
 }
 
