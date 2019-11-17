@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Observer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="column__name">Subject</div>
+
+            <div class="items-container items-container_subject">
+                <div class="column__item" id="btn-create">Click to Create</div>
+                <div class="column__item" id="btn-render">Click to Render</div>
+                <div class="column__item" id="btn-change">Click to Change</div>
+                <div class="column__item" id="btn-update">Click to Update</div>
+                <div class="column__item" id="btn-remove">Click to Remove</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="column__name">Observers</div>
+
+            <div class="items-container items-container_observers">
+                <div class="column__item" id="observer-created">Subject was Created</div>
+                <div class="column__item" id="observer-rendered">Subject was Rendered</div>
+                <div class="column__item" id="observer-changed">Subject was Changed</div>
+                <div class="column__item" id="observer-updated">Subject was Updated</div>
+                <div class="column__item" id="observer-removed">Subject was Removed</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
